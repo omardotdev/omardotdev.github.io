@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const defaultTheme = prefersDarkMode ? "tokyo-night-dark" : "tokyo-night-light";
     const preferredTheme = localStorage.getItem("theme");
 
-    if (!preferredTheme) {
+    if (!preferredTheme || !['tokyo-night-dark', 'tokyo-night-storm', 'tokyo-night-light'].includes(preferredTheme)) {
         localStorage.setItem("theme", defaultTheme);
         selector.value = defaultTheme;
         html.dataset.theme = defaultTheme;
