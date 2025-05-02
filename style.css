@@ -13,7 +13,7 @@
 body {
     font-family: BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Inter", system-ui; 
     background-color: var(--bg);
-    color: white;
+    color: var(--text);
     margin: 0;
     padding: 0;
 }
