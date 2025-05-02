@@ -1,4 +1,4 @@
 # website
 my very epic website
 
-![image](https://github.com/user-attachments/assets/eeb4e044-4a1e-4c07-9d05-50d0145f490b)
+![image](https://github.com/user-attachments/assets/429eda00-7770-4eef-b7c0-812a8ea34945)
