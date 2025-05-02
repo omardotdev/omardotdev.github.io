@@ -1,5 +1,5 @@
 :root {
-    --bg:#191724;
+    --bg: #191724;
     --bar-bg: #1f1d2e;
     --window-bg: #1f1d2e;
     --window-titlebar-bg: #26233a;
@@ -52,6 +52,7 @@ svg, .keyboard-layout {
     box-shadow: 0 10px 25px 0px rgba(0, 0, 0, 0.603);
     top: 20vh;
     left: 20vw;
+    border: 1px solid var(--window-titlebar-bg);
 }
 
 .window-body {
