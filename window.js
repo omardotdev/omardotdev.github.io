@@ -1,35 +1,50 @@
-dragElement(document.getElementById("window"));
+document.addEventListener("DOMContentLoaded", () => {
+	const hwnd = document.querySelector(".window")
+	const titleBar = hwnd.querySelector(".window-titlebar")
 
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    elmnt.onmousedown = dragMouseDown;
-  }
+	titleBar.addEventListener("mousedown", startDrag)
+	titleBar.addEventListener("touchstart", startDrag, { passive: false })
 
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    document.onmousemove = elementDrag;
-  }
+	function startDrag(e) {
+		if (e.target !== titleBar) return
 
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
+		let isTouch = e.type.startsWith("touch")
+		let startX = isTouch ? e.touches[0].clientX : e.clientX
+		let startY = isTouch ? e.touches[0].clientY : e.clientY
 
-  function closeDragElement() {
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
+		let offsetX = startX - hwnd.offsetLeft
+		let offsetY = startY - hwnd.offsetTop
+
+		function onMove(e) {
+			let clientX = isTouch ? e.touches[0].clientX : e.clientX
+			let clientY = isTouch ? e.touches[0].clientY : e.clientY
+
+			let newX = clientX - offsetX
+			let newY = clientY - offsetY
+
+			hwnd.style.top = `${newY}px`
+			hwnd.style.left = `${newX}px`
+		}
+
+		function stopMove() {
+			let maxX = window.innerWidth - hwnd.offsetWidth
+			let maxY = window.innerHeight - hwnd.offsetHeight
+
+			let finalX = Math.min(Math.max(hwnd.offsetLeft, 0), maxX)
+			let finalY = Math.min(Math.max(hwnd.offsetTop, 0), maxY)
+
+			hwnd.style.top = `${finalY}px`
+			hwnd.style.left = `${finalX}px`
+
+			document.removeEventListener("mousemove", onMove)
+			document.removeEventListener("mouseup", stopMove)
+			document.removeEventListener("touchmove", onMove)
+			document.removeEventListener("touchend", stopMove)
+		}
+
+		document.addEventListener("mousemove", onMove)
+		document.addEventListener("mouseup", stopMove)
+		document.addEventListener("touchmove", onMove, { passive: false })
+		document.addEventListener("touchend", stopMove)
+	}
+})
