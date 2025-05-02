@@ -1,0 +1,140 @@
+:root {
+    --bg:#191724;
+    --bar-bg: #1f1d2e;
+    --window-bg: #1f1d2e;
+    --window-titlebar-bg: #26233a;
+    --text: #e0def4;
+    --red: #eb6f92;
+    --yellow: #f6c177;
+    --green: #31748f;
+    --window-border: #26233a;
+}
+
+body {
+    font-family: BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Inter", system-ui; 
+    background-color: var(--bg);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.bar {
+    display: flex;
+    height: 24px;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--bar-bg);
+    padding-left: 15px;
+    font-size: 13px;
+}
+
+svg, .keyboard-layout {
+    width: 20px;
+    height: 20px;
+    fill: var(--text);
+}
+
+.space {
+    flex-grow: 1;
+}
+
+.keyboard-layout {
+    margin-right: 10px;
+    width: 13px;
+}
+
+.window {
+    position: absolute;
+    background-color: var(--window-bg);
+    width: 600px;
+    height: 380px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px 0px rgba(0, 0, 0, 0.603);
+    top: 20vh;
+    left: 20vw;
+}
+
+.window-body {
+    padding: 20px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.social-links:hover {
+    text-decoration-line:underline;
+    cursor: pointer;
+}
+
+.social-links {
+    border: 1px solid var(--window-titlebar-bg);
+    color: var(--text);
+    border-radius: 5px;
+    padding: .2em;
+    min-width: 5rem;
+}
+
+.window-body-main {
+    gap: 20rem;
+}
+
+#avatar {
+    border-radius: 50%;
+}
+
+.window-titlebar {
+    display: flex;
+    background-color: var(--window-titlebar-bg);
+    padding: 3px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    height: 25px;
+}
+
+.bar span[aria-label="recovery"] {
+    font-weight: 900;
+}
+
+.bar {
+    font-weight: 600;
+}
+
+.window-controls {
+    display: flex;
+    padding: 5px;
+    gap: .5rem;
+}
+
+.window-controls button {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.window-controls button[aria-label="red"] {
+    background-color: var(--red);
+}
+
+.window-controls button[aria-label="yellow"] {
+    background-color: var(--yellow);
+}
+
+.window-controls button[aria-label="green"] {
+    background-color: var(--green);
+}
