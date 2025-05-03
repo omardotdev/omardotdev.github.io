@@ -51,8 +51,8 @@ svg, .keyboard-layout {
 .window {
     position: absolute;
     background-color: var(--window-bg);
-    width: 600px;
-    height: 380px;
+    width: auto;
+    max-width: 600px;
     border-radius: 12px;
     box-shadow: 0 10px 25px 0px rgba(0, 0, 0, 0.603);
     top: 20vh;
