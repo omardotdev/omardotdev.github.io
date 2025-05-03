@@ -61,6 +61,12 @@ svg, .keyboard-layout {
     z-index: 99;
 }
 
+@media (max-width: 447px) {
+	.window {
+		left: 0;
+	}
+}
+
 #oneko {
     z-index: 99999;
 }
