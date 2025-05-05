@@ -33,12 +33,6 @@ img {
     cursor: url('./cursors/default.png'), auto !important;
 }
 
-.dropdown span:hover,
-a:hover,
-.social-links:hover {
-    cursor: url('./cursors/pointer.png'), auto !important;
-}
-
 .bar {
     display: flex;
     position: absolute;
