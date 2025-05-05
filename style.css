@@ -73,7 +73,6 @@ svg, .keyboard-layout {
 .dropdown {
     position: relative;
     display: inline-block;
-    cursor: pointer;
 }
   
 .dropdown-content {
@@ -149,7 +148,6 @@ a:hover {
 
 .social-links:hover {
     text-decoration-line: underline;
-    cursor: pointer;
 }
 
 .social-links {
