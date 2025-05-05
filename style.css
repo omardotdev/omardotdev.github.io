@@ -29,6 +29,7 @@ body,
 a,
 span,
 div,
+button,
 img {
     cursor: url('./cursors/default.png'), auto !important;
 }
