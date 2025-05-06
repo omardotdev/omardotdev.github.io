@@ -70,38 +70,6 @@ svg, .keyboard-layout {
     width: 13px;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-  
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--bar-bg);
-    border-radius: 5px;
-    width: 88pt;
-    height: 12pt;
-    padding: 4px;
-    color: var(--muted-text);
-    text-align: left;
-    backdrop-filter: blur(10px);
-    margin-top: 5px;
-}
-
-.dropdown-content span {
-    padding-left: 8px;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover {
-    background-color: var(--window-titlebar-bg);
-    border-radius: 2px;
-}
-
 .window {
     position: absolute;
     background-color: var(--window-bg);
