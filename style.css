@@ -1,14 +1,18 @@
+@font-face {
+    font-family: "Inter";
+    src: url(./fonts/Inter.ttf);
+}
+
 :root {
-    --bg: #191724;
-    --bar-bg: rgb(31, 29, 46, 0.60);
-    --window-bg: #1f1d2e;
-    --window-titlebar-bg: #26233a;
-    --text: #e0def4;
-    --muted-text: #6e6a86;
-    --red: #eb6f92;
-    --yellow: #f6c177;
-    --green: #31748f;
-    --window-border: #26233a;
+    --bg: #2e3440;
+    --bar-bg: rgba(59, 66, 82, 0.70);
+    --window-bg: #3b4252;
+    --window-titlebar-bg: #434c5e;
+    --text: #d8dee9;
+    --muted-text: #bbc6d9;
+    --red: #bf616a;
+    --yellow: #ebcb8b;
+    --green: #a3be8c;
 }
 
 html, body {
@@ -126,12 +130,22 @@ a:hover {
     min-width: 5rem;
 }
 
+.version {
+    font-size: 14px;
+    line-height: 0;
+    margin-top: -7px;
+    margin-bottom: 25px;
+    color: var(--muted-text);
+}
+
 .window-body-main {
-    gap: 20rem;
+    display: flex;
+    align-items: center;
 }
 
 #avatar {
     border-radius: 50%;
+    margin-right: 20px;
 }
 
 .window-titlebar {
