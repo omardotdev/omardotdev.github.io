@@ -1,0 +1,140 @@
+---
+const name = "omardotdev";
+const about = "hi! i'm a code developer from egypt who learns html, css and some javascript, i'm also really interested into programming too lol.";
+---
+
+<div class="window" id="window">
+    <div class="window-titlebar">
+        <span>{name}</span>
+        <span class="titlebar-space"></span>
+        <button aria-label="minimize"></button>
+        <button aria-label="maximize"></button>
+        <button aria-label="close"></button>
+    </div>
+    <div class="window-body">
+        <div class="window-body-main">
+            <img id="avatar" height="80" width="80" src="https://avatars.githubusercontent.com/u/180954465?v=4" />
+            <div>
+                <h3>{name}</h3>
+                <span>{about}</span>
+                <ul class="socials">
+                    <li>
+                        <a class="social-links" href="https://discord.com/users/1135918173959491595">Discord</a>
+                    </li>
+                    <li>
+                        <a class="social-links" href="https://online.supertuxkart.net/users.php?user=omardotdev">SuperTuxKart</a>
+                    </li>
+                    <li>
+                        <a class="social-links" href="https://sh.itjust.works/u/omardotdev">Lemmy</a>
+                    </li>
+                    <li>
+                        <a class="social-links" href="https://github.com/omardotdev">Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script is:inline src="src/js/window.js"></script>
+
+<style>
+    .window {
+        position: absolute;
+        background-color: var(--window-bg);
+        width: auto;
+        max-width: 350px;
+        top: 20vh;
+        left: 20vw;
+        box-shadow:
+            inset -1px -1px #0a0a0a,
+            inset 1px 1px #dfdfdf,
+            inset -2px -2px grey,
+            inset 2px 2px #fff;
+        padding: 3px;
+    }
+
+    @media (max-width: 447px) {
+        .window {
+            left: 0;
+        }
+    }
+
+    .window-body {
+        margin: 8px;
+    }
+
+    .socials {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        gap: 0.2rem;
+        list-style-type: none;
+    }
+
+    a {
+        color: blue;
+    }
+
+    a:hover {
+        cursor: url(/cursors/hand.png), auto;
+    }
+
+    .window-body-main {
+        display: flex;
+        align-items: center;
+    }
+
+    #avatar {
+        margin-right: 20px;
+    }
+
+    .window-titlebar {
+        display: flex;
+        color: white;
+        font-family: "MS Sans Serif Bold";
+        background: var(--window-titlebar-bg);
+        padding: 3px 2px 3px 3px;
+    }
+
+    .window-titlebar button {
+        display: block;
+        min-height: 14px;
+        min-width: 16px;
+        padding: 0;
+        box-shadow:
+            inset -1px -1px #0a0a0a,
+            inset 1px 1px #fff,
+            inset -2px -2px grey,
+            inset 2px 2px #dfdfdf;
+        border-radius: 0px;
+        border: none;
+        background-color: silver;
+        cursor: url(/cursors/cursor.png),auto !important;
+    }
+
+    .titlebar-space {
+        flex-grow: 1;
+    }
+
+    .window-titlebar button[aria-label="close"] {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='8' height='7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0h2v1h1v1h2V1h1V0h2v1H7v1H6v1H5v1h1v1h1v1h1v1H6V6H5V5H3v1H2v1H0V6h1V5h1V4h1V3H2V2H1V1H0V0z' fill='%23000'/%3E%3C/svg%3E");
+        background-position: top 3px left 4px;
+        background-repeat: no-repeat;
+        margin-left: 2px;
+    }
+
+    .window-titlebar button[aria-label="maximize"] {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='9' height='9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9 0H0v9h9V0zM8 2H1v6h7V2z' fill='%23000'/%3E%3C/svg%3E");
+        background-position: top 2px left 3px;
+        background-repeat: no-repeat;
+        margin-left: 2px;
+    }
+
+    .window-titlebar button[aria-label="minimize"] {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='6' height='2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000' d='M0 0h6v2H0z'/%3E%3C/svg%3E");
+        background-position: bottom 3px left 4px;
+        background-repeat: no-repeat;
+        margin-left: 2px;
+    }
+</style>
