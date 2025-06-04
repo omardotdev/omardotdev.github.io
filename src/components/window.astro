@@ -1,11 +1,13 @@
 ---
 import cat from '../assets/cat.jpg';
+import cat_compressed from '../assets/cat_compressed.jpg';
 const name = "omardotdev";
 const about = "hi! i'm a code developer from egypt who learns html, css and some javascript, i'm also really interested into programming too lol.";
 ---
 
 <div class="window" id="window">
     <div class="window-titlebar">
+        <img class="window-icon" src={cat_compressed.src}></img>
         <span>{name}</span>
         <span class="titlebar-space"></span>
         <button aria-label="minimize"></button>
@@ -81,6 +83,12 @@ const about = "hi! i'm a code developer from egypt who learns html, css and some
         cursor: url(/cursors/hand.png), auto;
     }
 
+    .window-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 2px;
+    }
+
     .window-body-main {
         display: flex;
         align-items: center;
@@ -96,6 +104,7 @@ const about = "hi! i'm a code developer from egypt who learns html, css and some
         font-family: "MS Sans Serif Bold";
         background: var(--window-titlebar-bg);
         padding: 3px 2px 3px 3px;
+        align-items: center;
     }
 
     .window-titlebar button {
@@ -103,11 +112,7 @@ const about = "hi! i'm a code developer from egypt who learns html, css and some
         min-height: 14px;
         min-width: 16px;
         padding: 0;
-        box-shadow:
-            inset -1px -1px #0a0a0a,
-            inset 1px 1px #fff,
-            inset -2px -2px grey,
-            inset 2px 2px #dfdfdf;
+        box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
         border-radius: 0px;
         border: none;
         background-color: silver;

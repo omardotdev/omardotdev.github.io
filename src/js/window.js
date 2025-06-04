@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const hwnd = document.querySelector(".window")
-	const titleBar = hwnd.querySelector(".titlebar-space")
+	const titleBar = hwnd.querySelector(".window-titlebar")
 
 	titleBar.addEventListener("mousedown", startDrag)
 	titleBar.addEventListener("touchstart", startDrag, { passive: false })
