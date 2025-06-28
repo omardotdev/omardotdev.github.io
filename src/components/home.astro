@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets"
+import Vennie from "../assets/vennie.jpg";
+import Navbar from "../components/navbar.astro";
+---
+
+<Navbar />
+<main>
+    <h1>hi! i'm <span class="graident">Omar<span></h1>
+    <p>i'm a web developer from egypt who learns html, css and some javascript, i'm also really interested into programming too lol</p>
+    <p>here is a random picture of <a href="https://vennie.moe">vennie</a> i guess..</p>
+    <Image src={Vennie} alt="Vennie from vennie.moe" width="300" height="500" />
+</main>
+
+<style>
+    .graident {
+        background: linear-gradient(90deg,rgba(129, 161, 193, 1) 0%, rgba(94, 129, 172, 1) 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+	a {
+		color: #81a1c1;
+	}
+</style>

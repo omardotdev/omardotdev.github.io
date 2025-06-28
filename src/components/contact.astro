@@ -1,0 +1,41 @@
+---
+import Navbar from "../components/navbar.astro";
+---
+
+<Navbar />
+<main>
+    <h1>Contacts</h1>
+    <p>you can find me on these places:</p>
+    <ul class="socials">
+        <li>
+            <a class="social-links" href="https://discord.com/users/1135918173959491595">Discord</a>
+        </li>
+        <li>
+            <a class="social-links" href="https://online.supertuxkart.net/users.php?user=omardotdev">SuperTuxKart</a>
+        </li>
+        <li>
+            <a class="social-links" href="https://sh.itjust.works/u/omardotdev">Lemmy</a>
+        </li>
+        <li>
+            <a class="social-links" href="https://github.com/omardotdev">Github</a>
+        </li>
+    </ul>
+</main>
+
+<style>
+    .socials {
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .social-links {
+        background-color: rgb(46, 52, 64);
+        text-decoration: none;
+        color: #e5e9f0;
+        border-radius: 5px;
+        padding: 8px;
+    }
+</style>

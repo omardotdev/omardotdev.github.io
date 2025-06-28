@@ -1,16 +1,11 @@
+---
+import Head from '../components/head.astro'
+---
+
+<!doctype html>
 <html lang="en">
 	<head>
-    	<meta charset="UTF-8" />
-    	<link rel="icon" href="https://github.com/omardotdev.png?size=256" />
- 		<meta name="viewport" content="width=device-width" />
-    	<meta property="og:title" content="Omar's website" />
-    	<meta property="og:description" content="my very epic website!" />
-    	<meta property="og:image" content="https://github.com/omardotdev.png?size=256" />
-    	<meta name="twitter:card" content="summary" />
-    	<meta name="twitter:title" content="Omar's website" />
-    	<meta name="twitter:description" content="my very epic website!" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Omar</title>
+		<Head />
 	</head>
 	<body>
 		<slot />
@@ -19,40 +14,15 @@
 
 <style>
 	@font-face {
-		font-family: "MS Sans Serif";
-		src: url(/fonts/regular/ms-sans-serif.ttf);
-	}
-
-	@font-face {
-		font-family: "MS Sans Serif Bold";
-		src: url(/fonts/bold/ms-sans-serif-bold.ttf);
-	}
-
-	:root {
-		--bg: url(/images/clouds.jpg);
-		--window-bg: #c6c6c6;
-		--window-titlebar-bg: linear-gradient(90deg, navy, #1084d0);
-		--text: black;
-	}
-
-	html,
-	.window-titlebar button {
-		cursor: url(/cursors/cursor.png), auto !important;
-	}
-
-	#oneko {
-    	z-index: 99999;
+    	font-family: "Nunito";
+    	src: url(/Nunito.ttf);
 	}
 
 	body {
-		font-family: "MS Sans Serif";
-		background-image: var(--bg);
-		background-size: cover;
-		height: 100vh;
-		color: var(--text);
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-		font-size: 11px;
+    	font-family: "Nunito";
+    	background-color: rgb(41, 46, 57);
+    	color: #eceff4;
+    	max-width: 750px;
+    	margin: 0 auto;
 	}
 </style>
